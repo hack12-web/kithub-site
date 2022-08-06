@@ -1,0 +1,38 @@
+.slide{
+  background: white url("/assets/img/pic_one.jpg") no-repeat scroll center;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+}
+.wrapper{
+  background-color: rgba(0,0,0,0.8);
+  height: 100%;
+}
+.welcome-msg{
+  transition: 1s;
+  cursor: pointer;
+}
+.welcome-msg:hover{
+  color: #495e57;
+  transform: scale(0.9);
+}
+.nav-btn{
+  transition: 1s;
+}
+.nav-btn:hover{
+  background: #495e57;
+  color: white;
+  transform: rotate(360deg);
+}
+.text-k{
+  color: red;
+}
+.text-i{
+  color: red;
+}
+.text-t{
+  color: red;
+}
+.text-hub{
+  color: red;
+}
