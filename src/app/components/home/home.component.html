@@ -93,9 +93,7 @@
               quibusdam natus ea harum, voluptatibus excepturi repellat accusamus labore! Doloribus
               ratione porro magnam quam beatae tenetur!</p>
           </mat-card-content>
-          <mat-card-actions class="text-center">
-
-          </mat-card-actions>
+          <mat-card-actions class="text-center"></mat-card-actions>
         </mat-card>
       </div>
       <div class="col-sm-4">
@@ -109,9 +107,7 @@
               quibusdam natus ea harum, voluptatibus excepturi repellat accusamus labore! Doloribus
               ratione porro magnam quam beatae tenetur!</p>
           </mat-card-content>
-          <mat-card-actions class="text-center">
-
-          </mat-card-actions>
+          <mat-card-actions class="text-center"></mat-card-actions>
         </mat-card>
       </div>
       <div class="col-sm-4">
@@ -142,13 +138,11 @@
     <br><br>
     <div class="display-1 text-center anim-domaine">NOTRE EQUIPE</div>
     <br><br>
-
     <div class="row">
-
       <div class="col-md-4 mt-3">
         <mat-card class="shadow-lg">
           <mat-card-content>
-            <img src="assets/img/passport.jpg" class="img-fluid img-ani" alt="" srcset="">
+            <img [src]="img_one_url" class="img-fluid img-ani" alt="" srcset="">
             <br>
             <div>
               <br>
@@ -161,7 +155,7 @@
       <div class="col-md-2 mt-3">
         <mat-card class="shadow-lg">
           <mat-card-content>
-            <img src="assets/img/passport.jpg" class="img-fluid img-ani" alt="" srcset="">
+            <img [src]="img_one_url" class="img-fluid img-ani" alt="" srcset="">
             <br>
             <div>
               <br>
@@ -174,7 +168,7 @@
       <div class="col-md-2 mt-3">
         <mat-card class="shadow-lg">
           <mat-card-content>
-            <img src="assets/img/passport.jpg" class="img-fluid img-ani" alt="" srcset="">
+            <img [src]="img_one_url" class="img-fluid img-ani" alt="" srcset="">
             <br>
             <div>
               <br>
@@ -187,7 +181,7 @@
       <div class="col-md-2 mt-3">
         <mat-card class="shadow-lg">
           <mat-card-content>
-            <img src="assets/img/passport.jpg" class="img-fluid img-ani" alt="" srcset="">
+            <img [src]="img_one_url" class="img-fluid img-ani" alt="" srcset="">
             <br>
             <div>
               <br>
@@ -200,7 +194,7 @@
       <div class="col-md-2 mt-3">
         <mat-card class="shadow-lg">
           <mat-card-content>
-            <img src="assets/img/passport.jpg" class="img-fluid img-ani" alt="" srcset="">
+            <img [src]="img_one_url" class="img-fluid img-ani" alt="" srcset="">
             <br>
             <div>
               <br>
@@ -211,9 +205,84 @@
         </mat-card>
       </div>
     </div>
-
   </div>
   <br><br>
+  <hr>
+  <div class="container-fluid">
+    <div class="display-1 text-center anim-domaine">EVENEMENTS</div><br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 mt-3">
+          <mat-card class="shadow-lg">
+            <mat-card-header>
+              <mat-card-subtitle class="sub-title text-center"> <a routerLink="http://" >evenement</a></mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <div>
+                <a routerLink="http://"><img [src]="event_img_one" class="img-fluid event-img" alt=""></a>
+              </div>
+            </mat-card-content>
+            <mat-card-actions>
+              <p>Event name : ........</p>
+              <p>Event Date and time</p>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        <div class="col-sm-6 mt-3">
+          <mat-card class="shadow-lg">
+            <mat-card-header>
+              <mat-card-subtitle class="sub-title text-center"><a routerLink="http://" >evenement</a></mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <div>
+                <a routerLink="http://"><img [src]="event_img_two" class="img-fluid event-img" alt=""></a>
+              </div>
+            </mat-card-content>
+            <mat-card-actions>
+              <p>Event name : ........</p>
+              <p>Event Date and time</p>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <button mat-stroked-button class="event-btn">VOIR LES EVENEMENTS</button>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <hr>
+  <br><br><br><br>
+  <div class="last-news">
+    <div class="display-1 text-center anim-last-news">DERNIERES NOUVELLES</div><br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 mt-3">
+          <div class="last-news-img">
+            <br>
+            <div class="small-text text-center">
+              <small>ANNONCE</small>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <p class="h1 text-white">Event name....</p>
+            <p class="h6 text-white">Date and time</p>
+          </div>
+        </div>
+        <div class="col-sm-6 mt-3">
+          <div class="last-news-img_two">
+            <br>
+            <div class="small-text text-center">
+              <small>ANNONCE</small>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <p class="h1 text-white">Event name....</p>
+            <p class="h6 text-white">Date and time</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+  </div>
   <hr>
   <div class="container-fluid">
     <br><br>
@@ -228,7 +297,7 @@
         <div class="col-sm-2 mt-3"><button mat-raised-button class="btn-paternaire" (click)="show_usa()" >Usa</button></div>
       </div>
     </div>
-    <div class="container-fluid">
+    <div class="container mt-3">
       <div id="tous" *ngIf="tous">
         <p>Tous nos partenaire !</p>
       </div>
