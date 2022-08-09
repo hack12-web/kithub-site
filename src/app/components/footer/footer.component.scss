@@ -1,5 +1,5 @@
 .loading-footer{
-  background: white url("/assets/img/pic_one.jpg") no-repeat scroll center;
+  background: white url("/assets/img/4.png") no-repeat scroll center;
   background-size: cover;
   height: 100%;
   color: #cdb3b3;
@@ -54,4 +54,9 @@ li:hover{
 .icons-g:hover{
   transform: rotate(360deg);
   color: #660a0a;
+}
+.btn-btm-fixed{
+
+  border-radius: 50%;
+  background-color: #cdb3b3;
 }
