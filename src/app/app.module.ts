@@ -7,9 +7,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
-//Blog Module
-import { BlogModule } from './blog/blog.module';
-
 //Material Module
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './components/home/home.component';
@@ -20,6 +17,11 @@ import { DomainComponent } from './components/domain/domain.component';
 import { MenuDialogComponent } from './components/menu-dialog/menu-dialog.component';
 import { BacktopBottonComponent } from './components/backtop-botton/backtop-botton.component';
 import { ProgrammeComponent } from './components/programme/programme.component';
+import { NewsLettersComponent } from './components/news-letters/news-letters.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -33,15 +35,18 @@ import { ProgrammeComponent } from './components/programme/programme.component';
     MenuDialogComponent,
     BacktopBottonComponent,
     ProgrammeComponent,
+    NewsLettersComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    BlogModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]

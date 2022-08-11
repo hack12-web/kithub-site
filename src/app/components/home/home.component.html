@@ -35,7 +35,7 @@
               ratione porro magnam quam beatae tenetur!</p>
           </mat-card-content>
           <mat-card-actions class="text-center">
-            <button mat-stroked-button class="more-btn">VOIR PLUS</button>
+            <a routerLink="/programme" mat-stroked-button class="more-btn">VOIR PLUS</a>
           </mat-card-actions>
         </mat-card>
       </div>
@@ -53,7 +53,7 @@
               ratione porro magnam quam beatae tenetur!</p>
           </mat-card-content>
           <mat-card-actions class="text-center">
-            <button mat-stroked-button class="more-btn">VOIR PLUS</button>
+            <a routerLink="/programme" mat-stroked-button class="more-btn">VOIR PLUS</a>
           </mat-card-actions>
         </mat-card>
       </div>
@@ -166,7 +166,7 @@
     </div>
     <br><br>
     <div class="text-center">
-      <button mat-stroked-button class="more-btn">VOIR PLUS</button>
+      <a routerLink="/domaine" mat-stroked-button class="more-btn">VOIR PLUS</a>
     </div>
     <br><br>
     <hr>
@@ -355,29 +355,9 @@
       </div>
     </div>
     <br><br><br><br>
-    <div class="news-letter">
-      <div class="letters">
-        <br><br><br><br>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6">
-              <p class="h1">Recevez nos <br>News letters</p>
-              <br><br><br><br>
-              <p class="">KITHUB au service des Jeunes pour leurs <br>Idées Innovantes</p>
-            </div>
-            <div class="col-sm-6">
-              <p class="h6">Newsletter</p>
-              <form [formGroup]="newsForm" (submit)="submi_news_letters(newsForm.value)">
-                <mat-form-field class="width-exp text-white " appearance="outline" color="accent">
-                  <mat-label>Email</mat-label>
-                  <input formControlName="email" type="email" matInput placeholder="Ex. nyongeroclaude@gmail.com">
-                </mat-form-field><br><br>
-                <button mat-raised-button class="btn-send-news">SUBCRIBE</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+    <hr>
+    <div class="container-fluid">
+      <app-news-letters></app-news-letters>
     </div>
     <br><br>
   </div>
