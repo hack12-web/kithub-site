@@ -3,18 +3,20 @@
     <br><br><br><br>
     <div class="container">
       <p class="display-1 text-center fw-bold">KIT-HUB</p>
-      <p class="text-center">Bienvenu a tous</p>
-      <br><br><br><br>
-      <p class="text-center h6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, sint.</p>
+      <br><br><br><br><br><br>
+      <p class="text-center h6">KNOWLEDGE AND IMPACT TRADE HUB</p>
+      <p class="text-center">innovation and social impact</p>
       <br><br><br><br><br><br><br><br>
-      <p class="text-center"><a mat-raised-button>LIRE PLUS</a></p>
+      <div>
+        <p class="text-center"><a routerLink="/about" mat-stroked-button class="ready-more">LIRE PLUS</a></p>
+      </div>
     </div>
   </div>
 </section>
 <section class="cont-sec" id="home">
   <div class="container">
     <br><br><br><br>
-    <div><p class="display-1 text-center nos-prog">PROGRAMMES</p></div>
+    <div><p class="display-1 text-center"><mat-label class="anim-domaine">PROGRAMMES</mat-label></p></div>
     <br><br><br>
     <div class="row">
       <div class="col-sm-6">
@@ -65,7 +67,7 @@
         <img src="assets/img/logokit.png" class="img-fluid kithub-logo" alt="" srcset="">
       </div>
       <div class="col-sm-6">
-        <p class="display-4 nos-prog">APROPOS DE NOUS</p>
+        <p class="display-4"> <mat-label class="nos-prog">APROPOS DE NOUS</mat-label></p>
         <p class="text-femm-dev">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis fugit necessitatibus,
           quisquam sapiente excepturi reiciendis in fuga, eius ipsa obcaecati neque rem debitis officiis
@@ -84,7 +86,7 @@
           ratione porro magnam quam beatae tenetur!
         </p>
         <div class="text-center">
-          <button mat-stroked-button class="more-btn">VOIR PLUS</button>
+          <a routerLink="/about" mat-stroked-button class="more-btn">VOIR PLUS</a>
         </div>
       </div>
     </div>
@@ -92,7 +94,7 @@
   <hr>
   <div class="container-fluid">
     <br><br>
-    <div class="display-1 text-center anim-domaine">DOMAINES</div>
+    <div class="display-1 text-center"><mat-label class="anim-domaine">DOMAINES</mat-label></div>
     <br><br>
     <div class="row">
       <div class="col-sm-4 mt-3">
@@ -171,7 +173,7 @@
   </div>
   <div class="container-fluid our-equip">
     <br><br>
-    <div class="display-1 text-center anim-domaine">NOTRE EQUIPE</div>
+    <div class="display-1 text-center"><mat-label class="anim-domaine">NOTRE EQUIPE</mat-label></div>
     <br><br>
     <div class="row">
       <div class="col-md-4 mt-3">
@@ -244,7 +246,7 @@
   <br><br>
   <hr>
   <div class="container-fluid">
-    <div class="display-1 text-center anim-domaine">EVENEMENTS</div><br><br>
+    <div class="display-1 text-center"> <mat-label class="anim-domaine">EVENEMENTS</mat-label></div><br><br>
     <div class="container">
       <div class="row">
         <div class="col-sm-6 mt-3">
@@ -289,7 +291,7 @@
   <hr>
   <br><br><br><br>
   <div class="last-news">
-    <div class="display-1 text-center anim-last-news">DERNIERES NOUVELLES</div><br><br>
+    <div class="display-1 text-center"> <mat-label class="anim-last-news">DERNIERES NOUVELLES</mat-label></div><br><br>
     <div class="container">
       <div class="row">
         <div class="col-sm-6 mt-3">
@@ -321,7 +323,7 @@
   <hr>
   <div class="container-fluid">
     <br><br>
-    <div class="display-1 text-center anim-domaine">NOS PARTENAIRES</div><br><br>
+    <div class="display-1 text-center"><mat-label class="anim-domaine">NOS PARTENAIRES</mat-label></div><br><br>
     <div class="container">
       <div class="row">
         <div class="col-sm-2 mt-3"><button mat-raised-button class="btn-paternaire" (click)="show_all()" >Tous</button></div>
@@ -353,5 +355,31 @@
       </div>
     </div>
     <br><br><br><br>
+    <div class="news-letter">
+      <div class="letters">
+        <br><br><br><br>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <p class="h1">Recevez nos <br>News letters</p>
+              <br><br><br><br>
+              <p class="">KITHUB au service des Jeunes pour leurs <br>Idées Innovantes</p>
+            </div>
+            <div class="col-sm-6">
+              <p class="h6">Newsletter</p>
+              <form [formGroup]="newsForm" (submit)="submi_news_letters(newsForm.value)">
+                <mat-form-field class="width-exp text-white " appearance="outline" color="accent">
+                  <mat-label>Email</mat-label>
+                  <input formControlName="email" type="email" matInput placeholder="Ex. nyongeroclaude@gmail.com">
+                </mat-form-field><br><br>
+                <button mat-raised-button class="btn-send-news">SUBCRIBE</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
   </div>
 </section>
+

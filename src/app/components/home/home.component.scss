@@ -1,6 +1,7 @@
 .slide{
   background: white url("/assets/img/27.png") no-repeat scroll center;
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
   color: white;
 }
@@ -9,7 +10,7 @@
   height: 100%;
 }
 .cont-sec{
-  background-color: antiquewhite;
+  background-color: #ffffff;
 }
 .text-femm-dev{
   text-align: justify;
@@ -54,6 +55,13 @@
   color: #495e57;
   transform: scale(0.8);
 }
+.ready-more{
+  width: 200px;
+  height: 50px;
+  padding: 8px;
+  color: white;
+  border: solid 2px white;
+}
 .more-btn{
   transition: 1s;
 }
@@ -61,7 +69,7 @@
 .more-btn:hover{
   background: #495e57;
   color: white;
-  transform: rotate(360deg);
+  transform: scale(1.2);
 }
 .one-char{
   background: #495e57;
@@ -197,4 +205,24 @@ mat-card{
   color: white;
   border-radius: 60px;
   margin: 5px;
+}
+.news-letter{
+  background-color: #495e57;
+  background-size: cover;
+  height: 70vh;
+  color: white;
+  border-radius: 10px;
+}
+.width-exp{
+  width: 300px;
+  height: 40px;
+}
+.btn-send-news{
+  width: 150px;
+  height: 40px;
+  background-color: #495e57;
+  color: white;
+}
+.input-news-letters{
+  color: white;
 }

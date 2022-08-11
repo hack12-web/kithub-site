@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,7 @@ export class HomeComponent implements OnInit {
   public event_img_one:string = 'https://firebasestorage.googleapis.com/v0/b/fire-frontend-e1265.appspot.com/o/home_page%2Fcard_1.jpg?alt=media&token=7ea1afa8-b9c6-4e68-a23d-da77f4991141';
   public event_img_two:string = 'https://firebasestorage.googleapis.com/v0/b/fire-frontend-e1265.appspot.com/o/home_page%2Fcard_2.jpg?alt=media&token=44055c1b-8cf7-4dd8-bce5-5b6efbd4210f';
 
+  newsForm: FormGroup | any;
   public isHidden: boolean = true;
   public tous:boolean = true;
   public burundi:boolean = false;
@@ -67,9 +69,16 @@ export class HomeComponent implements OnInit {
     this.russie = false;
     this.usa = true;
   }
+  public submi_news_letters(value:any){
+    this.newsForm.reset();
+  }
 
-  constructor() { }
+  constructor(private fb : FormBuilder) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.newsForm = this.fb.group({
+      email:['', Validators.required]
+    });
+  }
 
 }

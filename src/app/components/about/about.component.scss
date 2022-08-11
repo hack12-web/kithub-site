@@ -1,10 +1,116 @@
 .slide{
   background: white url("/assets/img/2.png") no-repeat scroll center;
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
   color: white;
 }
 .wrapper{
   background-color: rgba(0,0,0,0.8);
   height: 100%;
+}
+.anim-text{
+  cursor: pointer;
+  transition: 1s;
+  position: relative;
+}
+.anim-text::before{
+  content: '';
+  position: absolute;
+  background-color: #495e57;
+  height: 3px;
+  width: 100px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: animate 4s linear infinite;
+}
+@keyframes animate{
+  0%{
+    width: 100px;
+  }
+  50%{
+    width: 200px;
+  }
+  100%{
+    width: 100px;
+  }
+}
+.anim-text:hover{
+  color: #495e57;
+  transform: scale(0.8);
+}
+.historique-text{
+  text-align: justify;
+}
+.objectifif-text{
+  text-align: justify;
+}
+.rs-1{
+  border: solid 4px #495e57;
+}
+.cs-1{
+  background-color: #495e57;
+  color: white;
+}
+.sec-2{
+  background: #000000;
+  width: 100%;
+  height: auto;
+  color: white;
+}
+.rs-2{
+  border: solid 4px white;
+}
+.cs-2{
+  background-color: #ffffff;
+  color: #000000;
+}
+.sec-3{
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+}
+.card-1{
+  background-color: #495e57;
+  transition: 1s;
+}
+.card-1:hover{
+  transform: scale(1.1);
+}
+.card-2{
+  background-color: #ffffff;
+  border-left: solid 4px black;
+  color: #495e57;
+  transition: 1s;
+}
+.card-2:hover{
+  transform: scale(1.1);
+}
+.card-3{
+  background-color: #495e57;
+  transition: 1s;
+}
+.card-3:hover{
+  transform: scale(1.1);
+}
+.news-letter{
+  background-color: #495e57;
+  background-size: cover;
+  height: 70vh;
+  color: white;
+  border-radius: 10px;
+}
+.width-exp{
+  width: 300px;
+  height: 40px;
+}
+.btn-send-news{
+  width: 150px;
+  height: 40px;
+  background-color: #495e57;
+  color: white;
+}
+.input-news-letters{
+  color: white;
 }
